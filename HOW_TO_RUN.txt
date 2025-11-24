@@ -1,0 +1,128 @@
+╔═══════════════════════════════════════════════════════════════╗
+║          DDA SINGLE LINE DRAWING - QUICK GUIDE                ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📋 STEP 1: Install SDL2 (Graphics Library)
+───────────────────────────────────────────────────────────────
+Run this command in terminal (enter password when asked):
+
+    sudo apt install libsdl2-dev
+
+
+📋 STEP 2: Compile the Program
+───────────────────────────────────────────────────────────────
+    cd "/mnt/data/UR/graphic design"
+    gcc -o dda_single_line dda_single_line.c -lSDL2 -lm
+
+
+📋 STEP 3: Run the Program
+───────────────────────────────────────────────────────────────
+    ./dda_single_line
+
+
+💡 EXAMPLE USAGE
+───────────────────────────────────────────────────────────────
+
+$ ./dda_single_line
+
+Enter the starting point coordinates:
+  x1: 100
+  y1: 100
+
+Enter the ending point coordinates:
+  x2: 700
+  y2: 500
+
+[Window opens with your line drawn!]
+
+
+📊 SAMPLE COORDINATES TO TRY
+───────────────────────────────────────────────────────────────
+
+Horizontal Line:
+  x1: 100, y1: 300, x2: 700, y2: 300
+
+Vertical Line:
+  x1: 400, y1: 50, x2: 400, y2: 550
+
+Diagonal Line (bottom-left to top-right):
+  x1: 100, y1: 500, x2: 700, y2: 100
+
+Diagonal Line (top-left to bottom-right):
+  x1: 100, y1: 100, x2: 700, y2: 500
+
+Steep Line:
+  x1: 400, y1: 100, x2: 450, y2: 500
+
+Shallow Line:
+  x1: 100, y1: 300, x2: 700, y2: 350
+
+
+🎨 WHAT YOU'LL SEE
+───────────────────────────────────────────────────────────────
+✓ White background window (800 x 600 pixels)
+✓ Black line drawn from your start to end point
+✓ 🔴 Red dot at starting point
+✓ 🟢 Green dot at ending point
+✓ Terminal shows DDA algorithm calculation details
+
+
+🔧 WINDOW CONTROLS
+───────────────────────────────────────────────────────────────
+Press ESC         → Close window
+Click X button    → Close window
+
+
+📐 COORDINATE SYSTEM
+───────────────────────────────────────────────────────────────
+    (0,0) ─────────────────── (799,0)
+      │                          │
+      │                          │
+      │      Your Drawing        │
+      │         Area             │
+      │                          │
+      │                          │
+    (0,599) ───────────────── (799,599)
+
+Valid Range:
+  x: 0 to 799
+  y: 0 to 599
+
+
+✨ FEATURES
+───────────────────────────────────────────────────────────────
+✓ User inputs coordinates (no hardcoded values)
+✓ Draws exactly ONE line
+✓ Shows complete DDA algorithm calculations
+✓ Displays steps, increments, and pixel count
+✓ Visual markers for start/end points
+✓ Clean, simple interface
+
+
+🐛 TROUBLESHOOTING
+───────────────────────────────────────────────────────────────
+
+Problem: "SDL.h: No such file or directory"
+Fix:     sudo apt install libsdl2-dev
+
+Problem: "cannot find -lSDL2"  
+Fix:     Same as above
+
+Problem: "Permission denied"
+Fix:     chmod +x dda_single_line
+         ./dda_single_line
+
+Problem: Coordinates out of range error
+Fix:     Use values: x (0-799), y (0-599)
+
+
+═══════════════════════════════════════════════════════════════
+
+🚀 READY TO START?
+
+1. Install SDL2:    sudo apt install libsdl2-dev
+2. Go to folder:    cd "/mnt/data/UR/graphic design"
+3. Run program:     ./dda_single_line
+
+That's it! Enjoy drawing lines! 🎉
+
